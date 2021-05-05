@@ -46,11 +46,11 @@ def handle_message(event):
         "emojiId": "002"
     }
     ]
-    text_message = TextSendMessage(text='$ LINE emoji $', emojis=[emoji])
+    text_message = TextSendMessage(text='$ LINE emoji $')
     if get_message == "長輩在不在?":
         fun1 = "在"
     else:
         fun1 = "不在"
     # Send To Line
-    reply = TextSendMessage(text = fun1+'$ 0x100001 $' )
+    reply = TextSendMessage(text = fun1+'$ 0x100001 $' , emojis=[emoji])
     line_bot_api.reply_message(event.reply_token, reply)
