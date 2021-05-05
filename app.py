@@ -34,10 +34,23 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     get_message = event.message.text
+    emoji = [
+    {
+        "index": 0,
+        "productId": "5ac1bfd5040ab15980c9b435",
+        "emojiId": "001"
+    },
+    {
+        "index": 13,
+        "productId": "5ac1bfd5040ab15980c9b435",
+        "emojiId": "002"
+    }
+    ]
+    text_message = TextSendMessage(text='$ LINE emoji $', emojis=[emoji])
     if get_message == "長輩在不在?":
         fun1 = "在"
     else:
         fun1 = "不在"
     # Send To Line
-    reply = TextSendMessage(text = fun1 )
+    reply = TextSendMessage(text = fun1+'$0x100004' )
     line_bot_api.reply_message(event.reply_token, reply)
