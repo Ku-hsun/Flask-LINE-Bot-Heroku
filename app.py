@@ -33,19 +33,6 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    # 貼圖選單?
-    emoji = [
-    {
-        "index": 0,
-        "productId": "5ac1bfd5040ab15980c9b435",
-        "emojiId": "001"
-    },
-    {
-        "index": 13,
-        "productId": "5ac1bfd5040ab15980c9b435",
-        "emojiId": "002"
-    }
-    ]
     get_message = event.message.text
 
     # Send To Line
