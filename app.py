@@ -52,5 +52,8 @@ def handle_message(event):
     else:
         fun1 = "不在"
     # Send To Line
-    reply = TextSendMessage(text = fun1+'$ LINE 0x100001 $', emojis=[emoji])
+    reply = TextSendMessage(text = fun1+'$ LINE 0x100001 $', emojis=[emoji])+ImageSendMessage(
+    original_content_url='https://example.com/original.jpg',
+    preview_image_url='https://example.com/preview.jpg'
+)
     line_bot_api.reply_message(event.reply_token, reply)
