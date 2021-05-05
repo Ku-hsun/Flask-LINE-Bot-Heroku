@@ -52,5 +52,5 @@ def handle_message(event):
     else:
         fun1 = "不在"
     # Send To Line
-    reply = TextSendMessage(text = fun1+'$0x100004' )
+    reply = TextSendMessage(text = fun1+'$ 0x100001 $' )
     line_bot_api.reply_message(event.reply_token, reply)
