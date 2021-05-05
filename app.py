@@ -36,7 +36,7 @@ def handle_message(event):
     get_message = event.message.text
 
     # Send To Line
-    reply = = ImageSendMessage(
+    reply = ImageSendMessage(
     original_content_url='https://d.ecimg.tw/items/DMAA0R190096T2L/000001_1585290016.jpg',
     preview_image_url='https://d.ecimg.tw/items/DMAA0R190096T2L/000001_1585290016.jpg'
     )
