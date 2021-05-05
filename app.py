@@ -34,7 +34,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     get_message = event.message.text
-
+    if get_message == 1:
+        reply = TextSendMessage(text="是不是要"+f"{get_message}" )
     # Send To Line
-    reply = TextSendMessage(text="是不是要"+f"{get_message}" )
+    
     line_bot_api.reply_message(event.reply_token, reply)
