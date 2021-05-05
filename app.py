@@ -36,5 +36,9 @@ def handle_message(event):
     get_message = event.message.text
 
     # Send To Line
-    reply = TextSendMessage(text="你說的是不是"+f"{get_message}" )
+    reply = = ImageSendMessage(
+    original_content_url='https://d.ecimg.tw/items/DMAA0R190096T2L/000001_1585290016.jpg',
+    preview_image_url='https://d.ecimg.tw/items/DMAA0R190096T2L/000001_1585290016.jpg'
+    )
+    # TextSendMessage(text="你說的是不是"+f"{get_message}" )
     line_bot_api.reply_message(event.reply_token, reply)
