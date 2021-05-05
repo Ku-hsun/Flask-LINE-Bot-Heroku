@@ -48,9 +48,16 @@ def handle_message(event):
     ]
     text_message = TextSendMessage(text='$ LINE emoji $')
     if get_message == "長輩在不在?":
-        fun1 = "在"
+        reply =ImageSendMessage(
+        original_content_url='https://github.com/Ku-hsun/Flask-LINE-Bot-Heroku/blob/main/img/FDA9DA75-9EF4-4B95-B03C-C9F8869A2339.jpg',
+        preview_image_url='https://github.com/Ku-hsun/Flask-LINE-Bot-Heroku/blob/main/img/FDA9DA75-9EF4-4B95-B03C-C9F8869A2339.jpg'
+        )
     else:
-        fun1 = "不在"
+        reply =ImageSendMessage(
+        original_content_url='https://github.com/Ku-hsun/Flask-LINE-Bot-Heroku/blob/main/img/S__92119050.jpg',
+        preview_image_url='https://github.com/Ku-hsun/Flask-LINE-Bot-Heroku/blob/main/img/S__92119050.jpg'
+        )
+        
     # Send To Line
-    reply = TextSendMessage(text = fun1+'$ LINE 0x100001 $', emojis=[emoji])
+    # reply =TextSendMessage(text = fun1+'$ LINE 0x100001 $', emojis=[emoji])
     line_bot_api.reply_message(event.reply_token, reply)
