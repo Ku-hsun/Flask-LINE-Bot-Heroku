@@ -36,6 +36,8 @@ def handle_message(event):
     get_message = event.message.text
     if get_message == "長輩在不在?":
         fun1 = "在"
+    else:
+        fun1 = "不在"
     # Send To Line
     reply = TextSendMessage(text = fun1 )
     line_bot_api.reply_message(event.reply_token, reply)
